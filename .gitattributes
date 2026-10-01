@@ -1,0 +1,2 @@
+# vCard must keep CRLF line endings on the server; do not let git convert them.
+*.vcf -text

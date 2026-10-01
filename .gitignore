@@ -1,0 +1,4 @@
+_spec/
+_out/
+node_modules/
+*.log

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>林彥宇｜實體小卡 90×54mm</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+  <style>
+    /* 90mm x 54mm = 340px x 204px（96dpi），所以稿內的 px 數值可以直接用 */
+    @page { size: 90mm 54mm; margin: 0; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background: #ffffff;
+      color: #2b2622;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .sheet { display: flex; flex-wrap: wrap; gap: 40px; padding: 24px 32px; }
+    .card { width: 90mm; height: 54mm; box-sizing: border-box; overflow: hidden; flex-shrink: 0; }
+    @media print {
+      .sheet { display: block; padding: 0; }
+      .card { break-inside: avoid; page-break-inside: avoid; }
+      .card-front { break-after: page; page-break-after: always; }
+    }
+  </style>
+</head>
+<body>
+<!-- 列印成 PDF：兩頁，第 1 頁正面、第 2 頁反面（scripts/render-assets.ps1）。數值照 _spec/PrintCard.dc.html。 -->
+<div class="sheet">
+
+  <div class="card card-front" style="border: 1px solid #c9c1b4; background: #f6f1e7; display: flex; flex-direction: column; justify-content: space-between; padding: 22px 24px; position: relative;">
+    <div style="position: absolute; top: 0; left: 0; bottom: 0; width: 10px; display: flex; flex-direction: column;">
+      <div style="flex-grow: 1; background: #dfe7dd;"></div>
+      <div style="flex-grow: 1; background: #f5d9c4;"></div>
+      <div style="flex-grow: 1; background: #e3ddf0;"></div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px; padding-left: 8px;">
+      <div style="font-size: 30px; font-weight: 900; letter-spacing: 0.06em; line-height: 1.1;">林彥宇</div>
+      <div style="font-size: 11px; color: #3f3934; line-height: 1.5;">苗栗縣身心障礙者服務中心 第一區 專任督導</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 2px; padding-left: 8px; font-size: 10px; color: #6b625a; line-height: 1.5;">
+      <span>jin40225@gmail.com</span>
+      <span>jin40225-boop.github.io/card</span>
+    </div>
+  </div>
+
+  <div class="card card-back" style="border: 1px solid #c9c1b4; background: #2b2622; color: #f6f1e7; display: flex; align-items: center; gap: 18px; padding: 22px 24px;">
+    <div style="width: 124px; height: 124px; background: #f6f1e7; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+      <img src="assets/qr-card.svg" alt="名片 QR" style="width: 110px; height: 110px; display: block;">
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="font-size: 16px; font-weight: 900; line-height: 1.4;">掃一下，<br>把我存進你的手機</div>
+      <div style="font-size: 10px; color: #d9d0c2; line-height: 1.6;">存聯絡人、寫信、加 LINE、演講簡報與 ADHD 平台都在裡面。這張卡會過期，那一頁不會。</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
