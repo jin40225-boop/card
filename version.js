@@ -1,1 +1,1 @@
-window.__BUILD__ = { commit: "dev", date: "2026-10-01" };
+window.__BUILD__ = { commit: "71f783b", date: "2026-10-01" };
